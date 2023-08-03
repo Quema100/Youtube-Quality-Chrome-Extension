@@ -42,10 +42,7 @@ let Youtube = () => {
                         spanElement.click();
                         console.log("1080p Premium");
                         break; // 2160p와 1440p, 1080p를 찾지 못한 경우 1080p Premium를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다
-                    } else if (spanElement.textContent.includes('720p')){
-                        spanElement.click();
-                        break;
-                    }
+                    } 
                 }
             }else if(anotherelement){
                 anotherelement.click()
@@ -93,10 +90,7 @@ let Youtube = () => {
                     } else if (spanElement.textContent.includes('1080p Premium')) {
                         spanElement.click();
                         break; // 2160p와 1440p, 1080p를 찾지 못한 경우 1080p Premium를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다
-                    } else if (spanElement.textContent.includes('720p')){
-                        spanElement.click();
-                        break;
-                    }
+                    } 
                 }
             }else if(anotherelement){
                 anotherelement.click()
