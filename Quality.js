@@ -1,21 +1,35 @@
 let Youtube = () => {
     if (window.location.pathname.startsWith('/watch')){
-        const spanElements = document.getElementsByTagName("span")
-        for (const spanElement of spanElements) {
-            if (spanElement.textContent.includes('2160p')) {
+        const spanElements = document.querySelector('div[class="ytp-menuitem-content"] > div > span')
+        if(spanElements !== null && spanElements.textContent !== '자동'){
+            if (spanElements.textContent.includes('2160p')) {
                 console.log("2160p fin");
                 return;
-            } else if (spanElement.textContent.includes('1440p')) {
+            } else if (spanElements.textContent.includes('1440p')) {
                 console.log("1440p  fin");
                 return;
-            } else if (spanElement.textContent.includes('1080p')) {
+            } else if (spanElements.textContent.includes('1080p')) {
                 console.log("1080p fin");
                 return;
-            } else if(spanElement.textContent.includes('1080p Premium')){
+            } else if(spanElements.textContent.includes('1080p Premium')){
                 console.log("1080p Premium fin");
                 return;
             }
-        }      
+        }else if (spanElements !== null && spanElements.textContent !== 'Auto' ){
+            if (spanElements.textContent.includes('2160p')) {
+                console.log("2160p fin");
+                return;
+            } else if (spanElements.textContent.includes('1440p')) {
+                console.log("1440p  fin");
+                return;
+            } else if (spanElements.textContent.includes('1080p')) {
+                console.log("1080p fin");
+                return;
+            } else if(spanElements.textContent.includes('1080p Premium')){
+                console.log("1080p Premium fin");
+                return;
+            }
+        }
         const topelement = document.querySelector('button[aria-label="Settings"]')
         const topelementKo = document.querySelector('button[aria-label="설정"]')
         if(topelement){
@@ -24,7 +38,7 @@ let Youtube = () => {
             const secondelement = document.querySelector('span[class="ytp-menu-label-secondary"]')
             if(secondelement){
                 secondelement.click()
-                const spanElements = document.getElementsByTagName("span")
+                const spanElements = document.querySelectorAll('div[class="ytp-menuitem-label"] > div > span')
                 for (const spanElement of spanElements) {
                     if (spanElement.textContent.includes('2160p')) {
                         spanElement.click();
@@ -46,9 +60,7 @@ let Youtube = () => {
                 }
             }else if(anotherelement){
                 anotherelement.click()
-                console.log("다른 성공 2")
-                const spanTag = document.getElementsByTagName("span")
-                console.log()
+                const spanTag = document.querySelectorAll('div[class="ytp-menuitem-label"] > div > span')
                 for (const span of spanTag) {
                     if (span.textContent.includes('2160p')) {
                         span.click();
@@ -76,7 +88,7 @@ let Youtube = () => {
             const secondelement = document.querySelector('span[class="ytp-menu-label-secondary"]')
             if(secondelement){
                 secondelement.click()
-                const spanElements = document.getElementsByTagName("span")
+                const spanElements = document.querySelectorAll('div[class="ytp-menuitem-label"] > div > span')
                 for (const spanElement of spanElements) {
                     if (spanElement.textContent.includes('2160p')) {
                         spanElement.click();
@@ -94,7 +106,7 @@ let Youtube = () => {
                 }
             }else if(anotherelement){
                 anotherelement.click()
-                const spanTag = document.getElementsByTagName("span")
+                const spanTag =document.querySelectorAll('div[class="ytp-menuitem-label"] > div > span')
                 for (const span of spanTag) {
                     if (span.textContent.includes('2160p')) {
                         span.click();
@@ -126,5 +138,5 @@ let skip=()=>{
     }
 };
 
-setInterval(Youtube,1000)
+setInterval(Youtube,3000)
 setInterval(skip,500)
