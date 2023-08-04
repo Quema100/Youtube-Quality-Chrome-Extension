@@ -43,7 +43,11 @@ let Youtube = () => {
                     } else if (spanElement.textContent.trim() === "1080p HD" || spanElement.textContent.trim() === "1080p60 HD") {
                         spanElement.click();
                         break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
-                    }
+                    } else if (spanElement.textContent.includes('Auto')) {
+                        console.log('auto')
+                        spanElement.click();
+                        break; 
+                    } 
                 }
             }else if(anotherelement){
                 anotherelement.click()
@@ -59,9 +63,10 @@ let Youtube = () => {
                         span.click();
                         break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
                     } else if (span.textContent.includes('Auto')) {
+                        console.log('auto')
                         span.click();
                         break; 
-                    }
+                    } 
                 }
             }
 
@@ -82,6 +87,10 @@ let Youtube = () => {
                     } else if (spanElement.textContent.trim() === '1080p HD' || spanElement.textContent.trim() === '1080p60 HD') {
                         spanElement.click();
                         break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
+                    } else if (spanElement.textContent.includes('자동')) {
+                        console.log('auto')
+                        spanElement.click();
+                        break; 
                     }
                 }
             }else if(anotherelement){
@@ -98,6 +107,7 @@ let Youtube = () => {
                         span.click();
                         break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
                     } else if (span.textContent.includes('자동')) {
+                        console.log('auto')
                         span.click();
                         break; 
                     }
