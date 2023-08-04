@@ -136,7 +136,13 @@ let skip=()=>{
             skipButton.click();
         }
     }
+    const skipButton = document.querySelector('.ytp-ad-skip-button-slot');
+    if(skipButton != undefined){
+        console.log("skip")
+        skipButton.click();
+    }
+
 };
 
-setInterval(Youtube,3000)
+setInterval(Youtube,2000)
 setInterval(skip,500)
