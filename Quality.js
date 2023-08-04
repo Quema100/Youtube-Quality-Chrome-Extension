@@ -11,9 +11,6 @@ let Youtube = () => {
             } else if (spanElements.textContent.trim() === '1080p HD' || spanElements.textContent.trim() === '1080p60 HD') {
                 console.log("1080p fin");
                 return;
-            } else if(spanElements.textContent.trim() === '1080p HD Premium향상된 비트 전송률'){
-                console.log("1080p Premium fin");
-                return;
             }
         }else if (spanElements !== null && spanElements.textContent !== 'Auto' ){
             if (spanElements.textContent.includes('2160p')) {
@@ -24,9 +21,6 @@ let Youtube = () => {
                 return;
             } else if (spanElements.textContent.trim() === '1080p HD' || spanElements.textContent.trim() === '1080p60 HD') {
                 console.log("1080p fin");
-                return;
-            } else if(spanElements.textContent.trim() === '1080p Premium HDEnhanced bitrate'){
-                console.log("1080p Premium fin");
                 return;
             }
         }
@@ -46,13 +40,10 @@ let Youtube = () => {
                     } else if (spanElement.textContent.includes('1440p')) {
                         spanElement.click();
                         break; // 2160p를 찾지 못한 경우 1440p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
-                    } else if (spanElement.textContent.trim() === '1080p HD' || spanElement.textContent.trim() === '1080p60 HD') {
+                    } else if (spanElement.textContent.trim() === "1080p HD" || spanElement.textContent.trim() === "1080p60 HD") {
                         spanElement.click();
                         break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
-                    } else if (spanElement.textContent.trim() === '1080p Premium HD') {
-                        spanElement.click();
-                        break; // 2160p와 1440p, 1080p를 찾지 못한 경우 1080p Premium를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다
-                    } 
+                    }
                 }
             }else if(anotherelement){
                 anotherelement.click()
@@ -67,9 +58,6 @@ let Youtube = () => {
                     } else if (span.textContent.trim() === '1080p HD' || span.textContent.trim() === '1080p60 HD') {
                         span.click();
                         break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
-                    } else if (span.textContent.trim() === '1080p Premium HD') {
-                        span.click();
-                        break; // 2160p와 1440p, 1080p를 찾지 못한 경우 1080p Premium를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다
                     } else if (span.textContent.includes('Auto')) {
                         span.click();
                         break; 
