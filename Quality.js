@@ -42,19 +42,15 @@ let Youtube = () => {
                 for (const spanElement of spanElements) {
                     if (spanElement.textContent.includes('2160p')) {
                         spanElement.click();
-                        console.log("2160p");
                         break; // 2160p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
                     } else if (spanElement.textContent.includes('1440p')) {
                         spanElement.click();
-                        console.log("1440p");
                         break; // 2160p를 찾지 못한 경우 1440p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
                     } else if (spanElement.textContent.includes('1080p')) {
                         spanElement.click();
-                        console.log("1080p");
                         break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
                     } else if (spanElement.textContent.includes('1080p Premium')) {
                         spanElement.click();
-                        console.log("1080p Premium");
                         break; // 2160p와 1440p, 1080p를 찾지 못한 경우 1080p Premium를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다
                     } 
                 }
@@ -78,6 +74,10 @@ let Youtube = () => {
                         span.click();
                         console.log("1080p Premium");
                         break; // 2160p와 1440p, 1080p를 찾지 못한 경우 1080p Premium를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다
+                    } else if (span.textContent.includes('Auto')) {
+                        span.click();
+                        console.log("Auto");
+                        break; 
                     }
                 }
             }
@@ -120,7 +120,10 @@ let Youtube = () => {
                     } else if (span.textContent.includes('1080p Premium')) {
                         span.click();
                         break; // 2160p와 1440p, 1080p를 찾지 못한 경우 1080p Premium를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다
-                    } 
+                    } else if (span.textContent.includes('자동')) {
+                        span.click();
+                        break; 
+                    }
                 }
             }
 
