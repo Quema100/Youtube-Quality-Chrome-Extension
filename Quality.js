@@ -120,11 +120,6 @@ let Youtube = () => {
 window.onload = Youtube
 let skip=()=>{
     if (window.location.pathname.startsWith('/watch')){
-        const YesButton = document.querySelector('button[class="yt-spec-button-shape-next]')
-        if (YesButton){
-            console.log("yes")
-            YesButton.click()
-        }
         const skipButton = document.querySelector('.ytp-ad-skip-button');
         if(skipButton != undefined){
             console.log("skip")
@@ -135,6 +130,11 @@ let skip=()=>{
     if(skipButton != undefined){
         console.log("skip")
         skipButton.click();
+    }
+    const YesButton = document.querySelector('yt-button-renderer[id="confirm-button"] > yt-button-shape >button[class="yt-spec-button-shape-next]')
+    if (YesButton){
+        console.log("yes")
+        YesButton.click()
     }
 
 };
