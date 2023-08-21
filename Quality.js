@@ -8,7 +8,7 @@ let Youtube = () => {
             } else if (spanElements.textContent.includes('1440p')) {
                 console.log("1440p  fin");
                 return;
-            } else if (spanElements.textContent.trim() === '1080p HD' || spanElements.textContent.trim() === '1080p60 HD') {
+            } else if (spanElements.textContent.trim() === '1080p HD' || spanElements.textContent.trim() === '1080p60 HD' || spanElements.textContent.trim() === '1080p50 HD') {
                 console.log("1080p fin");
                 return;
             }
@@ -19,7 +19,7 @@ let Youtube = () => {
             } else if (spanElements.textContent.includes('1440p')) {
                 console.log("1440p  fin");
                 return;
-            } else if (spanElements.textContent.trim() === '1080p HD' || spanElements.textContent.trim() === '1080p60 HD') {
+            } else if (spanElements.textContent.trim() === '1080p HD' || spanElements.textContent.trim() === '1080p60 HD' || spanElements.textContent.trim() === '1080p50 HD') {
                 console.log("1080p fin");
                 return;
             };
@@ -40,7 +40,7 @@ let Youtube = () => {
                     } else if (spanElement.textContent.includes('1440p')) {
                         spanElement.click();
                         break; // 2160p를 찾지 못한 경우 1440p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
-                    } else if (spanElement.textContent.trim() === "1080p HD" || spanElement.textContent.trim() === "1080p60 HD") {
+                    } else if (spanElement.textContent.trim() === "1080p HD" || spanElement.textContent.trim() === "1080p60 HD" || spanElements.textContent.trim() === '1080p50 HD') {
                         spanElement.click();
                         break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
                     } else if (spanElement.textContent.includes('Auto')) {
