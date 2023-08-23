@@ -8,10 +8,16 @@ let Youtube = () => {
             } else if (spanElements.textContent.includes('1440p')) {
                 console.log("1440p  fin");
                 return;
-            } else if (spanElements.textContent.trim() === "1080p HD"  || spanElements.textContent.trim() === '1080p50 HD' || spanElements.textContent.trim() === "1080p60 HD" ) {
+            } else if (spanElements.textContent.trim() === "1080p60 HD" ) {
                 console.log("1080p fin");
                 return;
-            }
+            } else if (spanElements.textContent.trim() === '1080p50 HD') {
+                console.log("1080p fin");
+                return;
+            } else if (spanElements.textContent.trim() === "1080p HD") {
+                console.log("1080p fin");
+                return;
+            };
         }else if (spanElements !== null && spanElements.textContent !== 'Auto' ){
             if (spanElements.textContent.includes('2160p')) {
                 console.log("2160p fin");
@@ -19,7 +25,13 @@ let Youtube = () => {
             } else if (spanElements.textContent.includes('1440p')) {
                 console.log("1440p  fin");
                 return;
-            } else if (spanElements.textContent.trim() === "1080p HD"  || spanElements.textContent.trim() === '1080p50 HD' || spanElements.textContent.trim() === "1080p60 HD" ) {
+            } else if (spanElements.textContent.trim() === "1080p60 HD" ) {
+                console.log("1080p fin");
+                return;
+            } else if (spanElements.textContent.trim() === '1080p50 HD') {
+                console.log("1080p fin");
+                return;
+            } else if (spanElements.textContent.trim() === "1080p HD") {
                 console.log("1080p fin");
                 return;
             };
@@ -40,9 +52,15 @@ let Youtube = () => {
                     } else if (spanElement.textContent.includes('1440p')) {
                         spanElement.click();
                         break; // 2160p를 찾지 못한 경우 1440p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
-                    } else if (spanElement.textContent.trim() === "1080p HD"  || spanElement.textContent.trim() === '1080p50 HD' || spanElement.textContent.trim() === "1080p60 HD" ) {
+                    } else if (spanElement.textContent.trim() === "1080p60 HD") {
                         spanElement.click();
                         break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
+                    }else if(spanElement.textContent.trim() === '1080p50 HD'){
+                        spanElement.click();
+                        break; 
+                    } else if(spanElement.textContent.trim() === "1080p HD"){
+                        spanElement.click();
+                        break; 
                     } else if (spanElement.textContent.includes('Auto')) {
                         console.log('auto');
                         spanElement.click();
@@ -59,9 +77,15 @@ let Youtube = () => {
                     } else if (span.textContent.includes('1440p')) {
                         span.click();
                         break; // 2160p를 찾지 못한 경우 1440p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
-                    } else if (span.textContent.trim() === "1080p HD"  || span.textContent.trim() === '1080p50 HD' || span.textContent.trim() === "1080p60 HD" ) {
+                    } else if (span.textContent.trim() === "1080p60 HD" ) {
                         span.click();
                         break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
+                    }else if(span.textContent.trim() === '1080p50 HD'){
+                        span.click();
+                        break;
+                    }else if(span.textContent.trim() === "1080p HD"){
+                        span.click();
+                        break;
                     } else if (span.textContent.includes('Auto')) {
                         console.log('auto');
                         span.click();
@@ -84,9 +108,15 @@ let Youtube = () => {
                     } else if (spanElement.textContent.includes('1440p')) {
                         spanElement.click();
                         break; // 2160p를 찾지 못한 경우 1440p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
-                    } else if (spanElement.textContent.trim() === '1080p HD'  || spanElements.textContent.trim() === '1080p50 HD' || spanElement.textContent.trim() === '1080p60 HD') {
+                    } else if (spanElement.textContent.trim() === "1080p60 HD") {
                         spanElement.click();
                         break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
+                    }else if(spanElement.textContent.trim() === '1080p50 HD'){
+                        spanElement.click();
+                        break; 
+                    } else if(spanElement.textContent.trim() === "1080p HD"){
+                        spanElement.click();
+                        break; 
                     } else if (spanElement.textContent.includes('자동')) {
                         console.log('auto');
                         spanElement.click();
@@ -103,7 +133,13 @@ let Youtube = () => {
                     } else if (span.textContent.includes('1440p')) {
                         span.click();
                         break; // 2160p를 찾지 못한 경우 1440p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
-                    } else if (span.textContent.trim() === '1080p HD'  || spanElements.textContent.trim() === '1080p50 HD' || span.textContent.trim() === '1080p60 HD') {
+                    } else if (span.textContent.trim() === "1080p60 HD" ) {
+                        span.click();
+                        break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
+                    }else if(span.textContent.trim() === '1080p50 HD'){
+                        span.click();
+                        break;
+                    }else if(span.textContent.trim() === "1080p HD"){
                         span.click();
                         break; // 2160p와 1440p를 찾지 못한 경우 1080p를 찾았으면 더 이상 탐색하지 않고 반복문을 종료합니다.
                     } else if (span.textContent.includes('자동')) {
