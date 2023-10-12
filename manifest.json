@@ -3,6 +3,24 @@
     "name" : "Youtube Quality",
     "description" :"extensions by Quema",
     "version" : "2.0.0",
+    "action": {
+        "default_title": "...",
+        "default_popup": "./html/popup.html"
+    },
+
+    "background": {
+        "service_worker": "./js/background.js"
+      },
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "scripting",
+        "cookies",
+        "declarativeContent",
+        "storage"
+    ],
+
     "content_scripts": [
         {
             "matches": ["https://www.youtube.com/*"],

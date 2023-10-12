@@ -184,3 +184,17 @@ let skip=()=>{
 
 setInterval(Youtube,2000);
 setInterval(skip,500);
+
+chrome.runtime.sendMessage({ message: "안녕하세요, 백그라운드!" });
+
+chrome.runtime.sendMessage({ "key": "value" });
+
+var port = chrome.runtime.connect({name: "knockknock"});
+port.postMessage({joke: "Knock knock"});
+port.onMessage.addListener(function(msg) {
+  if (msg.question === "Who's there?")
+    port.postMessage({answer: "Madame"});
+  else if (msg.question === "Madame who?")
+    port.postMessage({answer: "Madame... Bovary"});
+    console.log("스크립트에서 메시지 받음:", msg);
+});
