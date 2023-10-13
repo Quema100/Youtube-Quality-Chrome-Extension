@@ -153,48 +153,7 @@ let Youtube = () => {
         };
     };
 };
-window.onload = Youtube;
-let skip=()=>{
-    if (window.location.pathname.startsWith('/watch')){
-        const skipButton = document.querySelector('.ytp-ad-skip-button');
-        if(skipButton != undefined){
-            console.log("skip");
-            skipButton.click();
-        };
-    };
-    const skipButton = document.querySelector('.ytp-ad-skip-button-slot');
-    if(skipButton != undefined){
-        console.log("skip")
-        skipButton.click();
-    }
-    const YesButton = document.querySelector('yt-button-renderer[id="confirm-button"] > yt-button-shape > button[aria-label="Yes"]')
-    if (YesButton){
-        console.log("yes");
-        YesButton.click();
-        return
-    };
-    const YesButtonKO = document.querySelector('yt-button-renderer[id="confirm-button"] > yt-button-shape > button[aria-label="예"]')
-    if (YesButtonKO){
-        console.log("yes");
-        YesButtonKO.click();
-        return
-    };
 
-};
+window.onload = Youtube;
 
 setInterval(Youtube,2000);
-setInterval(skip,500);
-
-chrome.runtime.sendMessage({ message: "안녕하세요, 백그라운드!" });
-
-chrome.runtime.sendMessage({ "key": "value" });
-
-var port = chrome.runtime.connect({name: "knockknock"});
-port.postMessage({joke: "Knock knock"});
-port.onMessage.addListener(function(msg) {
-  if (msg.question === "Who's there?")
-    port.postMessage({answer: "Madame"});
-  else if (msg.question === "Madame who?")
-    port.postMessage({answer: "Madame... Bovary"});
-    console.log("스크립트에서 메시지 받음:", msg);
-});
