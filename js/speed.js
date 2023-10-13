@@ -13,4 +13,4 @@ let speed = ()=>{
 
 window.onload=speed;
 
-setInterval(speed,500)
+setInterval(speed,1000)

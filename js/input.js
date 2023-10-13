@@ -15,8 +15,8 @@ window.onload=()=>{
             document.getElementById('submit').addEventListener('click',()=>{
                 const inputValue = parseFloat(inputValueElement.value);
         
-                if (inputValue > 16 || inputValue < 0){
-                    document.getElementById('fast').textContent = "Exceeded the appropriate speed"
+                if (inputValue > 16 || inputValue <= 0){
+                    document.getElementById('fast').textContent = "Exceeded the appropriate speed";
                 }else{
                     document.getElementById('fast').textContent = null
                     currentNumber = 0;
