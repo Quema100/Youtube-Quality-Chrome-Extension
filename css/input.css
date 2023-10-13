@@ -9,8 +9,8 @@ body{
     margin: 0;
     background: rgb(44, 44, 44);
     color: aliceblue;
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
 }
 
 #speed{
@@ -27,6 +27,7 @@ body{
 }
 
 #speed > #buttonstyle{
+    float: left;
     display: flex;
     width: 100%;
     height: 25%;
@@ -34,8 +35,9 @@ body{
     justify-content: center;
 }
 
-#speed > #buttonstyle > #submit{
-    width: 100px;
+#speed > #buttonstyle > #submit , #speed > #buttonstyle > #Infintiy{
+    margin-left: 3%;
+    width: 75px;
     border-style: double;
     border-color: aliceblue;
     border-radius: 50px;
@@ -44,11 +46,49 @@ body{
     background: rgb(38, 38, 38);
 }
 
-#speed > #buttonstyle > #submit:hover{
+#speed > #buttonstyle > #submit:hover , #speed > #buttonstyle > #Infintiy:hover{
     background: aliceblue;
     color: rgb(24, 24, 24);
     border-color: rgb(24, 24, 24);
     width: 107px;
     height: 27px;
     font-size: 14px;
+}
+
+#speed > #fast{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5%;
+    transition: .3s ease-in-out;
+    color: aliceblue;
+}
+
+#speed > #fast:hover{
+    color: rgb(181, 181, 181);
+}
+
+#speed > #linkdiv {
+    float: left;
+    width: 100%;
+    display: flex;
+    margin-top: 3%;
+    align-items: center;
+    justify-content: center;
+}
+
+#speed > #linkdiv > #link {
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in-out;
+    text-decoration:none;
+    color: aliceblue;
+    font-size: 11px;
+}
+
+#speed > #linkdiv #link:hover {
+    color: rgb(177, 177, 177);
 }

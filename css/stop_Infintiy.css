@@ -35,9 +35,9 @@ body{
     margin: 3% 0;
 }
 
-#speed > #buttonstyle > #up , #speed > #buttonstyle > #down ,#speed > #buttonstyle > #Infintiy{
+#speed > #buttonstyle > #stop{
     margin-left: 3%;
-    width: 55px;
+    width: 75px;
     border-style: double;
     border-color: aliceblue;
     border-radius: 50px;
@@ -46,7 +46,7 @@ body{
     background: rgb(38, 38, 38);
 }
 
-#speed > #buttonstyle > #up:hover ,#speed > #buttonstyle > #down:hover ,#speed > #buttonstyle > #Infintiy:hover{
+#speed > #buttonstyle > #stop:hover{
     background: aliceblue;
     color: rgb(24, 24, 24);
     border-color: rgb(24, 24, 24);
@@ -67,28 +67,5 @@ body{
 
 #speed > #fast:hover{
     color: rgb(181, 181, 181);
-}
-
-#speed > #linkdiv {
-    float: left;
-    width: 100%;
-    display: flex;
-    margin-top: 3%;
-    align-items: center;
-    justify-content: center;
-}
-
-#speed > #linkdiv > #link {
-    margin-left: 3%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .3s ease-in-out;
-    text-decoration:none;
-    color: aliceblue;
-    font-size: 11px;
-}
-
-#speed > #linkdiv #link:hover {
-    color: rgb(177, 177, 177);
+    font-size: 12.5px;
 }

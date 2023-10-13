@@ -3,9 +3,9 @@ let canUpClick = true;
 let canDownClick = true;
 
 window.onload = () =>{
-    chrome.runtime.onConnect.addListener(function(port) {
+    chrome.runtime.onConnect.addListener((port)=> {
         console.assert(port.name === "video-speed");
-        port.onMessage.addListener(function(msg) {
+        port.onMessage.addListener((msg)=> {
             const numberElement = document.getElementById('number');
 
             let currentNumber = msg.speed;
