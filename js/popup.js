@@ -4,12 +4,12 @@ window.onload = () =>{
         port.onMessage.addListener(function(msg) {
             const numberElement = document.getElementById('number');
 
-            let currentNumber = parseInt(msg.speed);
+            let currentNumber = msg.speed;
 
             numberElement.textContent = currentNumber
 
             document.getElementById('up').addEventListener('click', () => {
-                if (currentNumber >= 10){
+                if (currentNumber > 10){
                     document.getElementById('fast').textContent = "Exceeded the appropriate speed"
                 }else{
                     document.getElementById('fast').textContent = null

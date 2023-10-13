@@ -5,7 +5,7 @@ let speed = ()=>{
     port.postMessage({speed:`${document.getElementsByTagName("video")[0].playbackRate}`});
     port.onMessage.addListener(function(msg) {
         if (parseFloat(msg.value) || parseInt(msg.value) ){
-            document.getElementsByTagName("video")[0].playbackRate = msg.value
+            document.getElementsByTagName("video")[0].playbackRate = parseFloat(msg.value.toFixed(1));
             port.postMessage({speed:`${document.getElementsByTagName("video")[0].playbackRate}`});
         }
     });
