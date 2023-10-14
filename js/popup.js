@@ -10,18 +10,28 @@ window.onload = () =>{
 
             let currentNumber = msg.speed;
 
+            let flex_speed = msg.flex_speed;
+            console.log(msg)
+
             numberElement.textContent = currentNumber
 
             document.getElementById('up').addEventListener('click', () => {
                 if (canUpClick) {
-                    if (parseInt(currentNumber) >= 16) {
-                        document.getElementById('fast').textContent = "Exceeded the appropriate speed";
+                    if (flex_speed === true){
+                        document.getElementById('fast').textContent = "The speed has been fixed";
                         canUpClick = false;
 
                         setTimeout(() => {
                             canUpClick = true;
                             }, 1000);
-                    } else {
+                    }else if (parseInt(currentNumber) >= 16) {
+                        document.getElementById('fast').textContent = "Exceeded the appropriate speed";
+                        canUpClick = false;
+
+                        setTimeout(() => {
+                            canUpClick = true;
+                            }, 1000);  
+                    }else {
                         document.getElementById('fast').textContent = null;
                         currentNumber++;
                         port.postMessage({ value: currentNumber });
@@ -36,14 +46,21 @@ window.onload = () =>{
         
             document.getElementById('down').addEventListener('click',()=>{
                 if (canDownClick) {
-                    if (parseInt(currentNumber) <= 1){
+                    if (flex_speed === true){
+                        document.getElementById('fast').textContent = "The speed has been fixed";
+                        canUpClick = false;
+
+                        setTimeout(() => {
+                            canUpClick = true;
+                            }, 1000);
+                    }else if (parseInt(currentNumber) <= 1){
                         document.getElementById('fast').textContent = "Exceeded the appropriate speed";
                         canDownClick = false;
 
                         setTimeout(() => {
                             canDownClick = true;
                             }, 1000);
-                    }else{
+                    } else{
                         document.getElementById('fast').textContent = null
                         currentNumber--
                         port.postMessage({value:currentNumber});
