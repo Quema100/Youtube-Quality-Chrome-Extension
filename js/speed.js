@@ -1,4 +1,4 @@
-let infintiy
+let infintiy = null
 
 let speed = ()=>{
     const port = chrome.runtime.connect({name: "video-speed"});
@@ -6,10 +6,13 @@ let speed = ()=>{
     console.log(document.getElementsByTagName("video")[0].playbackRate)
     port.postMessage({speed:`${document.getElementsByTagName("video")[0].playbackRate}`});
     port.onMessage.addListener((msg)=> {
-        if (parseFloat(msg.value) || parseInt(msg.value) ){
-            document.getElementsByTagName("video")[0].playbackRate = parseFloat(msg.value.toFixed(1));
-            port.postMessage({speed:`${document.getElementsByTagName("video")[0].playbackRate}`});
+        if (infintiy === null){
+            if (parseFloat(msg.value) || parseInt(msg.value) ){
+                document.getElementsByTagName("video")[0].playbackRate = parseFloat(msg.value.toFixed(1));
+                port.postMessage({speed:`${document.getElementsByTagName("video")[0].playbackRate}`});
+            }
         }
+
 
         if (parseFloat(msg.Infintiy_value) || parseInt(msg.Infintiy_value)) {
             if (infintiy) {
@@ -25,6 +28,7 @@ let speed = ()=>{
         
         if (msg.stop_Infintiy === "stop") {
             clearInterval(infintiy);
+            infintiy = null
         }       
     });
 }

@@ -19,12 +19,9 @@ window.onload=()=>{
                     document.getElementById('fast').textContent = "Exceeded the appropriate speed";
                 }else{
                     document.getElementById('fast').textContent = null
-                    currentNumber = 0;
                     if (!isNaN(inputValue)) {
-                        currentNumber += inputValue;
-                        currentNumber = parseFloat(currentNumber.toFixed(1));
+                        currentNumber = parseFloat(inputValue.toFixed(1));
                         port.postMessage({value:currentNumber});
-                        numberElement.textContent = currentNumber;
                     }
                 }
             })
@@ -35,12 +32,9 @@ window.onload=()=>{
                     document.getElementById('fast').textContent = "Exceeded the appropriate speed";
                 }else{
                     document.getElementById('fast').textContent = null
-                    currentNumber = 0;
                     if (!isNaN(inputValue)) {
-                        currentNumber += inputValue;
-                        currentNumber = parseFloat(currentNumber.toFixed(1));
+                        currentNumber = parseFloat(inputValue.toFixed(1));
                         port.postMessage({Infintiy_value:currentNumber});
-                        numberElement.textContent = currentNumber;
                     }
                 }
             })

@@ -25,7 +25,6 @@ window.onload = () =>{
                         document.getElementById('fast').textContent = null;
                         currentNumber++;
                         port.postMessage({ value: currentNumber });
-                        numberElement.textContent = currentNumber;
                         canUpClick = false;
                 
                         setTimeout(() => {
@@ -48,7 +47,6 @@ window.onload = () =>{
                         document.getElementById('fast').textContent = null
                         currentNumber--
                         port.postMessage({value:currentNumber});
-                        numberElement.textContent = currentNumber;                
                         canDownClick = false;
                         
                         setTimeout(() => {
