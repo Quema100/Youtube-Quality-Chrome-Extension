@@ -11,7 +11,6 @@ window.onload = () =>{
             let currentNumber = msg.speed;
 
             let flex_speed = msg.flex_speed;
-            console.log(msg)
 
             numberElement.textContent = currentNumber
 
