@@ -3,6 +3,14 @@
     "name" : "Youtube Quality",
     "description" :"extensions by Quema",
     "version" : "3.5.0",
+    
+    "icons" :{
+        "16":"./icon/.png",
+        "48": "./icon/.png",
+        "64": "./icon/.png",
+        "128":"./icon/.png"
+    },
+
     "action": {
         "default_title": "...",
         "default_popup": "./html/popup.html"
