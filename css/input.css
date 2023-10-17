@@ -26,6 +26,37 @@ body{
     margin: 3% 0;
 }
 
+#speed > #inputValue{
+    width: 130px;
+    height: 22px;
+    border-radius: 5px;
+    border-color: aliceblue;
+    border-style: double;
+    background:rgb(24, 24, 24);
+    color: aliceblue;
+    transition: .3s ease-in-out;
+}
+
+#speed > #inputValue::placeholder{
+    color: rgb(200, 200, 200);
+}
+
+#speed > #inputValue:hover{
+    width: 135px;
+    height: 26px;
+    border-color: aliceblue;
+    border-style: double;
+    background:rgb(51, 51, 51);
+    color: aliceblue;
+}
+
+#inputValue[type="number"]::-webkit-outer-spin-button,
+#inputValue[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 #speed > #buttonstyle{
     float: left;
     display: flex;
@@ -56,7 +87,7 @@ body{
 }
 
 #speed > #fast{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 100%;

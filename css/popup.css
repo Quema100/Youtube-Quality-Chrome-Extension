@@ -56,7 +56,7 @@ body{
 }
 
 #speed > #fast{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -91,4 +91,18 @@ body{
 
 #speed > #linkdiv #link:hover {
     color: rgb(177, 177, 177);
+}
+
+/* ----animation---- */
+
+@keyframes animation{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
