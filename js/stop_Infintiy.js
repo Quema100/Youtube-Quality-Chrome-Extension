@@ -10,6 +10,7 @@ window.onload=()=>{
 
             document.getElementById('stop').addEventListener('click',()=>{
                 port.postMessage({stop_Infintiy:"stop"});
+                document.getElementById('fast').style.display = 'flex';
                 document.getElementById('fast').textContent = "Stoppage"
             })
 
