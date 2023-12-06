@@ -21,7 +21,7 @@ let skip=()=>{
     if (YesButtonKO){
         console.log("yes");
         YesButtonKO.click();
-        YesButton = null
+        YesButtonKO = null
     };
 
 };
