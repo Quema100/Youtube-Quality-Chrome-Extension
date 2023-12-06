@@ -15,13 +15,13 @@ let skip=()=>{
     if (YesButton){
         console.log("yes");
         YesButton.click();
-        return
+        YesButton = null
     };
     const YesButtonKO = document.querySelector('yt-button-renderer[id="confirm-button"] > yt-button-shape > button[aria-label="예"]')
     if (YesButtonKO){
         console.log("yes");
         YesButtonKO.click();
-        return
+        YesButton = null
     };
 
 };
