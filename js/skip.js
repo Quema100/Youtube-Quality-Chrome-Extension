@@ -12,13 +12,13 @@ let skip=()=>{
         skipButton.click();
     }
     const YesButton = document.querySelector('yt-button-renderer[id="confirm-button"] > yt-button-shape > button[aria-label="Yes"]')
-    if (YesButton){
+    if (YesButtonKO !== null){
         console.log("yes");
         YesButton.click();
         return YesButton = null
     };
     const YesButtonKO = document.querySelector('yt-button-renderer[id="confirm-button"] > yt-button-shape > button[aria-label="예"]')
-    if (YesButtonKO){
+    if (YesButtonKO !== null){
         console.log("yes");
         YesButtonKO.click();
         return YesButtonKO = null
