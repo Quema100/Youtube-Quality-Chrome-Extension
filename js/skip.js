@@ -6,7 +6,7 @@ let skip=()=>{
             skipButton.click();
         };
     };
-    const skipButton = document.querySelector('.ytp-ad-skip-button-slot');
+    const skipButton = document.querySelector('.ytp-skip-ad-button');
     if(skipButton != undefined){
         console.log("skip")
         skipButton.click();
