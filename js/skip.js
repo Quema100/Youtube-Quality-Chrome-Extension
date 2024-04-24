@@ -1,7 +1,7 @@
 let skip=()=>{
 
     const skipButton1 = document.querySelector('.ytp-skip-ad-button');
-    if(skipButton1 != undefined){
+    if(skipButton1 != null){
         console.log("skip")
         skipButton1.click();
     }
