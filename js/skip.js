@@ -1,9 +1,15 @@
 let skip=()=>{
 
-    const skipButton = document.querySelector('.ytp-skip-ad-button');
-    if(skipButton != undefined){
+    const skipButton1 = document.querySelector('.ytp-skip-ad-button');
+    if(skipButton1 != undefined){
         console.log("skip")
-        skipButton.click();
+        skipButton1.click();
+    }
+
+    const skipButton2 = document.querySelector('.ytp-ad-skip-button-container');
+    if(skipButton2 != undefined){
+        console.log("skip")
+        skipButton2.click();
     }
 
     const warningButton = document.querySelector('button[aria-label="절차를 이해했으며 계속 진행하기 원합니다."]');
@@ -19,16 +25,16 @@ let skip=()=>{
     }
 
     const YesButton = document.querySelector('yt-button-renderer[id="confirm-button"] > yt-button-shape > button[aria-label="Yes"]')
-    if (YesButton !== null){
+    if (YesButton != undefined){
         console.log("yes");
         YesButton.click();
-        return YesButton = null
+        return YesButton = undefined
     };
     const YesButtonKO = document.querySelector('yt-button-renderer[id="confirm-button"] > yt-button-shape > button[aria-label="예"]')
-    if (YesButtonKO !== null){
+    if (YesButtonKO != undefined){
         console.log("yes");
         YesButtonKO.click();
-        return YesButtonKO = null
+        return YesButtonKO = undefined
     };
 
 };
