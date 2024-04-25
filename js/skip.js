@@ -28,13 +28,11 @@ let skip=()=>{
     if (YesButton != undefined){
         console.log("yes");
         YesButton.click();
-        return YesButton = undefined
     };
     const YesButtonKO = document.querySelector('yt-button-renderer[id="confirm-button"] > yt-button-shape > button[aria-label="예"]')
     if (YesButtonKO != undefined){
         console.log("yes");
         YesButtonKO.click();
-        return YesButtonKO = undefined
     };
 
 };
