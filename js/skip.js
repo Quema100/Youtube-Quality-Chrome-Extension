@@ -29,6 +29,7 @@ let skip=()=>{
         console.log("yes");
         YesButton.click();
     };
+    
     const YesButtonKO = document.querySelector('yt-button-renderer[id="confirm-button"] > yt-button-shape > button[aria-label="예"]')
     if (YesButtonKO != undefined){
         console.log("yes");
