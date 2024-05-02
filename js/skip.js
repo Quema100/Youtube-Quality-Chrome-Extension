@@ -14,6 +14,7 @@ let skip=()=>{
 
     const adfast = document.querySelector('div[class="ytp-ad-text ytp-ad-preview-text-modern"]');
     if(adfast!=null||adfast!=undefined){
+        console.log("fast")
         document.getElementsByTagName("video")[0].playbackRate = 16
     
     }
