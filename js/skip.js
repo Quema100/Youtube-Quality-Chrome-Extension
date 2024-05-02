@@ -12,6 +12,12 @@ let skip=()=>{
         skipButton2.click();
     }
 
+    const adfast = document.querySelector('div[class="ytp-ad-text ytp-ad-preview-text-modern"]');
+    if(adfast!=null||adfast!=undefined){
+        document.getElementsByTagName("video")[0].playbackRate = 16
+    
+    }
+
     const warningButton = document.querySelector('button[aria-label="절차를 이해했으며 계속 진행하기 원합니다."]');
     if(warningButton != undefined){
         console.log("skip")
