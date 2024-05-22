@@ -20,6 +20,12 @@ let skip=()=>{
         
         }
 
+        if(adfast.textContent.includes('Video will play\nafter ad')){
+            console.log("fast")
+            document.getElementsByTagName("video")[0].playbackRate = 16
+        
+        }
+
         if(adfast.textContent.includes('Video plays soon')){
             console.log("fast")
             document.getElementsByTagName("video")[0].playbackRate = 16
