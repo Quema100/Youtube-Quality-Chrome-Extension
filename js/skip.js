@@ -12,7 +12,7 @@ let skip=()=>{
         skipButton2.click();
     }
 
-    const adfast = document.querySelector('div[class="ytp-ad-text ytp-ad-preview-text-modern"]');
+    const adfast = document.querySelector("div[class='ytp-preview-ad'] > div").textContent.includes('동영상이 곧 재생됩니다.');
     if(adfast!=null||adfast!=undefined){
         console.log("fast")
         document.getElementsByTagName("video")[0].playbackRate = 16
