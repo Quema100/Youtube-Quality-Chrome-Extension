@@ -12,11 +12,19 @@ let skip=()=>{
         skipButton2.click();
     }
 
-    const adfast = document.querySelector("div[class='ytp-preview-ad'] > div").textContent.includes('동영상이 곧 재생됩니다.');
+    const adfast = document.querySelector("div[class='ytp-preview-ad'] > div");
     if(adfast!=null||adfast!=undefined){
-        console.log("fast")
-        document.getElementsByTagName("video")[0].playbackRate = 16
-    
+        if(adfast.textContent.includes('동영상이 곧 재생됩니다.')){
+            console.log("fast")
+            document.getElementsByTagName("video")[0].playbackRate = 16
+        
+        }
+
+        if(adfast.textContent.includes('Video plays soon')){
+            console.log("fast")
+            document.getElementsByTagName("video")[0].playbackRate = 16
+        
+        }
     }
 
     const warningButton = document.querySelector('button[aria-label="절차를 이해했으며 계속 진행하기 원합니다."]');
