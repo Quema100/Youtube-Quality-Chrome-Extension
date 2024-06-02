@@ -36,8 +36,9 @@ let Youtube = () => {
                 return;
             };
         };
-        const topelement = document.querySelector('button[aria-label="Settings"]');
-        const topelementKo = document.querySelector('button[aria-label="설정"]');
+
+        const topelement = document.querySelector('div[class="ytp-chrome-controls"] > div[class="ytp-right-controls"] > button[aria-label="Settings"]');
+        const topelementKo = document.querySelector('div[class="ytp-chrome-controls"] > div[class="ytp-right-controls"] > button[aria-label="설정"]');
         if(topelement){
             topelement.click();
             const anotherelement = document.querySelector('div[class="ytp-menuitem-content"] > div > span');
