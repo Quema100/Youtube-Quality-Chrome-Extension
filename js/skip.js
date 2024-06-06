@@ -16,26 +16,32 @@ let skip=()=>{
     if(adfast!=null||adfast!=undefined){
         if(adfast.textContent.includes('동영상이 곧 재생됩니다.')){
             console.log("fast")
-            document.getElementsByTagName("video")[0].playbackRate = 16
+            for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
+                document.getElementsByTagName("video")[i].playbackRate = 16
+            }
         
         }
 
         if(adfast.textContent.includes('광고 후에\n동영상이 재생됩니다.')){
             console.log("fast")
-            document.getElementsByTagName("video")[0].playbackRate = 16
+            for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
+                document.getElementsByTagName("video")[i].playbackRate = 16
+            }
         
         }
 
         if(adfast.textContent.includes('Video will play\nafter ad')){
             console.log("fast")
-            document.getElementsByTagName("video")[0].playbackRate = 16
-        
+            for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
+                document.getElementsByTagName("video")[i].playbackRate = 16
+            }        
         }
 
         if(adfast.textContent.includes('Video plays soon')){
             console.log("fast")
-            document.getElementsByTagName("video")[0].playbackRate = 16
-        
+            for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
+                document.getElementsByTagName("video")[i].playbackRate = 16
+            }        
         }
     }
 
