@@ -45,6 +45,26 @@ let skip=()=>{
         }
     }
 
+    const adblockwarningEn= document.querySelector('button-view-model > button[aria-label="Close"]')
+    if (adblockwarningEn != null || adblockwarningEn!=undefined){
+        adblockwarningEn.click();
+        adblockwarningEn.remove();
+        console.log("skip&play")
+        for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
+            document.getElementsByTagName("video")[i].play()
+        }  
+    }
+
+    const adblockwarning= document.querySelector('button-view-model > button[aria-label="닫기"]')
+    if (adblockwarning != null || adblockwarning!=undefined){
+        adblockwarning.click();
+        adblockwarning.remove();
+        console.log("skip&play")
+        for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
+            document.getElementsByTagName("video")[i].play()
+        }  
+    }
+
     const warningButton = document.querySelector('button[aria-label="절차를 이해했으며 계속 진행하기 원합니다."]');
     if(warningButton != undefined){
         console.log("skip")
@@ -62,6 +82,9 @@ let skip=()=>{
         console.log("yes");
         YesButton.click();
         YesButton.remove();
+        for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
+            document.getElementsByTagName("video")[i].play()
+        }  
     };
     
     const YesButtonKO = document.querySelector('yt-button-renderer[id="confirm-button"] > yt-button-shape > button[aria-label="예"]')
@@ -69,6 +92,9 @@ let skip=()=>{
         console.log("yes");
         YesButtonKO.click();
         YesButtonKO.remove();
+        for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
+            document.getElementsByTagName("video")[i].play()
+        }  
     };
 
 };
