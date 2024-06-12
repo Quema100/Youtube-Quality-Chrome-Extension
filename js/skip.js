@@ -45,7 +45,7 @@ let skip=()=>{
         }
     }
 
-    const adblockwarningEn= document.querySelector('button-view-model > button[aria-label="Close"]')
+    const adblockwarningEn = document.querySelector('button-view-model > button[aria-label="Close"]')
     if (adblockwarningEn != null || adblockwarningEn!=undefined){
         adblockwarningEn.click();
         adblockwarningEn.remove();
@@ -55,7 +55,7 @@ let skip=()=>{
         }  
     }
 
-    const adblockwarning= document.querySelector('button-view-model > button[aria-label="닫기"]')
+    const adblockwarning = document.querySelector('button-view-model > button[aria-label="닫기"]')
     if (adblockwarning != null || adblockwarning!=undefined){
         adblockwarning.click();
         adblockwarning.remove();
