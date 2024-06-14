@@ -49,6 +49,8 @@ let skip=()=>{
     if (adblockwarningEn != null || adblockwarningEn!=undefined){
         adblockwarningEn.click();
         adblockwarningEn.remove();
+        document.querySelector('tp-yt-iron-overlay-backdrop').remove();
+        document.querySelector('ytd-popup-container > tp-yt-paper-dialog').remove();
         console.log("skip&play")
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
@@ -59,6 +61,8 @@ let skip=()=>{
     if (adblockwarning != null || adblockwarning!=undefined){
         adblockwarning.click();
         adblockwarning.remove();
+        document.querySelector('tp-yt-iron-overlay-backdrop').remove();
+        document.querySelector('ytd-popup-container > tp-yt-paper-dialog').remove();
         console.log("skip&play")
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
