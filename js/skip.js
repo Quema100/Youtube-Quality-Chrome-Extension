@@ -50,7 +50,7 @@ let skip=()=>{
         adblockwarningEn.click();
         adblockwarningEn.remove();
         document.querySelector('tp-yt-iron-overlay-backdrop').remove();
-        // document.querySelector('ytd-popup-container > tp-yt-paper-dialog').remove();
+        // document.querySelector('ytd-popup-container > tp-yt-paper-dialog').remove(); #Hold off on changes
         console.log("skip&play")
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
@@ -62,7 +62,7 @@ let skip=()=>{
         adblockwarning.click();
         adblockwarning.remove();
         document.querySelector('tp-yt-iron-overlay-backdrop').remove();
-        // document.querySelector('ytd-popup-container > tp-yt-paper-dialog').remove();
+        // document.querySelector('ytd-popup-container > tp-yt-paper-dialog').remove(); #Hold off on changes
         console.log("skip&play")
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
