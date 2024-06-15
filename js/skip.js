@@ -48,25 +48,27 @@ let skip=()=>{
     const adblockwarningEn = document.querySelector('button-view-model > button[aria-label="Close"]')
     if (adblockwarningEn != null || adblockwarningEn!=undefined){
         adblockwarningEn.click();
-        adblockwarningEn.remove();
-        document.querySelector('tp-yt-iron-overlay-backdrop').remove();
-        // document.querySelector('ytd-popup-container > tp-yt-paper-dialog').remove(); #Hold off on changes
         console.log("skip&play")
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
         }  
+        adblockwarningEn.remove();
+        document.querySelector('ytd-popup-container > tp-yt-paper-dialog > ytd-enforcement-message-view-model[class="style-scope ytd-popup-container"]').remove();
+        document.querySelector('tp-yt-iron-overlay-backdrop').remove();
+        console.log("end")
     }
 
     const adblockwarning = document.querySelector('button-view-model > button[aria-label="닫기"]')
     if (adblockwarning != null || adblockwarning!=undefined){
         adblockwarning.click();
-        adblockwarning.remove();
-        document.querySelector('tp-yt-iron-overlay-backdrop').remove();
-        // document.querySelector('ytd-popup-container > tp-yt-paper-dialog').remove(); #Hold off on changes
         console.log("skip&play")
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
         }  
+        adblockwarning.remove();
+        document.querySelector('ytd-popup-container > tp-yt-paper-dialog > ytd-enforcement-message-view-model[class="style-scope ytd-popup-container"]').remove();
+        document.querySelector('tp-yt-iron-overlay-backdrop').remove();
+        console.log("end")
     }
 
     const warningButton = document.querySelector('button[aria-label="절차를 이해했으며 계속 진행하기 원합니다."]');
