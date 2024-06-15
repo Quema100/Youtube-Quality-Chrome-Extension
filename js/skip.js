@@ -52,9 +52,8 @@ let skip=()=>{
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
         }  
+        console.log("here")
         adblockwarningEn.remove();
-        document.querySelector('ytd-popup-container > tp-yt-paper-dialog > ytd-enforcement-message-view-model[class="style-scope ytd-popup-container"]').remove();
-        document.querySelector('tp-yt-iron-overlay-backdrop').remove();
         console.log("end")
     }
 
@@ -65,9 +64,8 @@ let skip=()=>{
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
         }  
+        console.log("here")
         adblockwarning.remove();
-        document.querySelector('ytd-popup-container > tp-yt-paper-dialog > ytd-enforcement-message-view-model[class="style-scope ytd-popup-container"]').remove();
-        document.querySelector('tp-yt-iron-overlay-backdrop').remove();
         console.log("end")
     }
 
