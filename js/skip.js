@@ -51,8 +51,10 @@ let skip=()=>{
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
         }  
-        setTimeout(()=>{adblockwarningEn.remove()}, 5000);
-        console.log("rm warning")
+        setTimeout(()=>{
+            adblockwarningEn.remove();
+            console.log("rm warning");
+        }, 3000);
     }
 
     const adblockwarning = document.querySelector('button-view-model > button[aria-label="닫기"]')
@@ -61,8 +63,10 @@ let skip=()=>{
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
         }  
-        setTimeout(()=>{adblockwarning.remove()}, 5000);
-        console.log("rm warning")
+        setTimeout(()=>{
+            adblockwarning.remove();
+            console.log("rm warning");
+        }, 3000);
     }
 
     const warningButton = document.querySelector('button[aria-label="절차를 이해했으며 계속 진행하기 원합니다."]');
