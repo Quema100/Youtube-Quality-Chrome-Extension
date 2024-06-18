@@ -51,7 +51,7 @@ let skip=()=>{
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
         }  
-        adblockwarningEn.remove();
+        setTimeout(()=>{adblockwarningEn.remove()}, 5000);
         console.log("rm warning")
     }
 
@@ -61,7 +61,7 @@ let skip=()=>{
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
         }  
-        adblockwarning.remove();
+        setTimeout(()=>{adblockwarning.remove()}, 5000);
         console.log("rm warning")
     }
 
