@@ -46,27 +46,23 @@ let skip=()=>{
     }
 
     const adblockwarningEn = document.querySelector('button-view-model > button[aria-label="Close"]')
-    if (adblockwarningEn != null || adblockwarningEn!=undefined){
-        let clickEn = adblockwarningEn.click();
+    if (adblockwarningEn != null || adblockwarningEn != undefined){
+        adblockwarningEn.click();
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
         }  
-        if(clickEn){
-            adblockwarningEn.remove();
-            console.log("rm warning")
-        }
+        adblockwarningEn.remove();
+        console.log("rm warning")
     }
 
     const adblockwarning = document.querySelector('button-view-model > button[aria-label="닫기"]')
-    if (adblockwarning != null || adblockwarning!=undefined){
-        let click = adblockwarning.click();
+    if (adblockwarning != null || adblockwarning != undefined){
+        adblockwarning.click();
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
         }  
-        if(click){
-            adblockwarning.remove();
-            console.log("rm warning")
-        }
+        adblockwarning.remove();
+        console.log("rm warning")
     }
 
     const warningButton = document.querySelector('button[aria-label="절차를 이해했으며 계속 진행하기 원합니다."]');
