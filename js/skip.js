@@ -53,7 +53,7 @@ let skip=()=>{
         }  
         setTimeout(()=>{        
             adblockwarningEn.remove();
-        },3000)
+        },2000)
         console.log("rm warning")
     }
 
@@ -65,7 +65,7 @@ let skip=()=>{
         }  
         setTimeout(()=>{        
             adblockwarning.remove();
-        },3000)
+        },2000)
         console.log("rm warning")
     }
 
