@@ -53,8 +53,8 @@ let skip=()=>{
         }  
         setTimeout(()=>{        
             adblockwarningEn.remove();
-        },4000)
-        console.log("rm warning")
+            console.log("rm warning")
+        },5000)
     }
 
     const adblockwarning = document.querySelector('button-view-model > button[aria-label="닫기"]')
@@ -65,8 +65,8 @@ let skip=()=>{
         }  
         setTimeout(()=>{        
             adblockwarning.remove();
-        },4000)
-        console.log("rm warning")
+            console.log("rm warning")
+        },5000)
     }
 
     const warningButton = document.querySelector('button[aria-label="절차를 이해했으며 계속 진행하기 원합니다."]');
