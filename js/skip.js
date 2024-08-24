@@ -5,6 +5,7 @@ let skip=()=>{
     
     if(adText){
         video.currentTime = video.duration
+        console.log("skip")
     }
 
     const adblockwarningEn = document.querySelector('button-view-model > button[aria-label="Close"]')
