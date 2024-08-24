@@ -1,48 +1,10 @@
 let skip=()=>{
 
-    const skipButton1 = document.querySelector('.ytp-skip-ad-button');
-    if(skipButton1 != null){
-        console.log("skip")
-        skipButton1.click();
-    }
-
-    const skipButton2 = document.querySelector('.ytp-ad-skip-button-container');
-    if(skipButton2 != undefined){
-        console.log("skip")
-        skipButton2.click();
-    }
-
-    const adfast = document.querySelector("div[class='ytp-preview-ad'] > div");
-    if(adfast!=null||adfast!=undefined){
-        if(adfast.textContent.includes('동영상이 곧 재생됩니다.')){
-            console.log("fast")
-            for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
-                document.getElementsByTagName("video")[i].playbackRate = 16
-            }
-        
-        }
-
-        if(adfast.textContent.includes('광고 후에\n동영상이 재생됩니다.')){
-            console.log("fast")
-            for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
-                document.getElementsByTagName("video")[i].playbackRate = 16
-            }
-        
-        }
-
-        if(adfast.textContent.includes('Video will play\nafter ad')){
-            console.log("fast")
-            for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
-                document.getElementsByTagName("video")[i].playbackRate = 16
-            }        
-        }
-
-        if(adfast.textContent.includes('Video plays soon')){
-            console.log("fast")
-            for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
-                document.getElementsByTagName("video")[i].playbackRate = 16
-            }        
-        }
+    const adText = document.querySelector('.ytp-ad-text');
+    const video = document.querySelector('video');
+    
+    if(adText){
+        video.currentTime = video.duration
     }
 
     const adblockwarningEn = document.querySelector('button-view-model > button[aria-label="Close"]')
