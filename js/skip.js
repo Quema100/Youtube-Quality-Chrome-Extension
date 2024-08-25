@@ -1,11 +1,14 @@
 let skip=()=>{
 
-    const adText = document.querySelector('.ytp-ad-text');
-    const video = document.querySelector('video');
-    
-    if(adText){
-        video.currentTime = video.duration
-        console.log("skip")
+    for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
+        const video = document.getElementsByTagName('video')[i];
+        const adText = document.querySelector('.ytp-ad-text');
+        if (adText && Number.isFinite(video.duration)) {
+            video.currentTime = video.duration;
+            console.log("Ad skipped");
+        } else {
+            console.log("No ad found or invalid video duration.");
+        }
     }
 
     const adblockwarningEn = document.querySelector('button-view-model > button[aria-label="Close"]')
