@@ -6,8 +6,6 @@ let skip=()=>{
         if (adText && Number.isFinite(video.duration)) {
             video.currentTime = video.duration;
             console.log("Ad skipped");
-        } else {
-            console.log("No ad found or invalid video duration.");
         }
     }
 
