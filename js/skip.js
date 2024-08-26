@@ -3,6 +3,10 @@ let skip=()=>{
     for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
         const video = document.getElementsByTagName('video')[i];
         const adText = document.querySelector('.ytp-ad-text');
+        const skipbutton = document.querySelector('button[id^="skip-button:"]').click()
+        if(skipbutton){
+            skipbutton.click()
+        }
         if (adText && Number.isFinite(video.duration)) {
             video.currentTime = video.duration;
             console.log("Ad skipped");
