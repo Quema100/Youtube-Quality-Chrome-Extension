@@ -3,14 +3,14 @@ let skip=()=>{
     for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
         const video = document.getElementsByTagName('video')[i];
         const adText = document.querySelector('.ytp-ad-text');
-        const skipbutton = document.querySelector('button[id^="skip-button:"]')[i]
-        if(skipbutton){
-            skipbutton.click()
-            console.log("Ad button click");
-        }
+        const skipbutton = document.querySelector('button[id^="skip-button:"]')
         if (adText && Number.isFinite(video.duration)) {
             video.currentTime = video.duration;
             console.log("Ad skipped");
+            if(skipbutton){
+                skipbutton.click()
+                console.log("Ad button click");
+            }
         }
     }
 
