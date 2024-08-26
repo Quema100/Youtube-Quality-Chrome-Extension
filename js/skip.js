@@ -6,6 +6,7 @@ let skip=()=>{
         const skipbutton = document.querySelector('button[id^="skip-button:"]').click()
         if(skipbutton){
             skipbutton.click()
+            console.log("Ad button click");
         }
         if (adText && Number.isFinite(video.duration)) {
             video.currentTime = video.duration;
