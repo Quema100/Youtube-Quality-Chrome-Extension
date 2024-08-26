@@ -3,7 +3,7 @@ let skip=()=>{
     for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
         const video = document.getElementsByTagName('video')[i];
         const adText = document.querySelector('.ytp-ad-text');
-        const skipbutton = document.querySelector('button[id^="skip-button:"]')
+        const skipbutton = document.querySelector('button[id^="skip-button:"]')[i]
         if(skipbutton){
             skipbutton.click()
             console.log("Ad button click");
