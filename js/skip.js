@@ -7,7 +7,7 @@ let skip=()=>{
         if (adText && Number.isFinite(video.duration)) {
             video.currentTime = video.duration;
             console.log("Ad skipped");
-            if( skipbutton && video.currentTime === video.duration - .1){
+            if( skipbutton && video.currentTime === video.duration){
                 video.playbackRate = 16
                 console.log("Ad button click");
             }
