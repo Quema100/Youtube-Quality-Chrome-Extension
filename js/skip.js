@@ -3,7 +3,7 @@ let skip=()=>{
     const skipButton1 = document.querySelector('.ytp-skip-ad-button');
     if(skipButton1 != null){
         console.log("skip")
-        skipButton1.click();
+        skipButton1.click(); // Not work... fucking blocking
     }
 
     const adText = document.querySelector('.ytp-ad-text');
@@ -11,7 +11,7 @@ let skip=()=>{
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             const video = document.getElementsByTagName('video')[i];
             if ( Number.isFinite(video.duration) ){
-                video.currentTime = video.duration;
+                video.currentTime = video.duration; // Some AD may require a bit of time.
                 console.log("Ad skipped");
             }
         }
