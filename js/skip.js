@@ -1,5 +1,11 @@
 let skip=()=>{
 
+    const skipButton1 = document.querySelector('.ytp-skip-ad-button');
+    if(skipButton1 != null){
+        console.log("skip")
+        skipButton1.click();
+    }
+
     const adText = document.querySelector('.ytp-ad-text');
     if (adText) {
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
