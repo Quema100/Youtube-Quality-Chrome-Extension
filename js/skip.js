@@ -1,18 +1,16 @@
 let skip=()=>{
 
-    for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
-        const video = document.getElementsByTagName('video')[i];
-        const adText = document.querySelector('.ytp-ad-text');
-        const skipbutton = document.querySelector('button[id^="skip-button:"]')
-        if (adText && Number.isFinite(video.duration)) {
-            video.currentTime = video.duration;
-            console.log("Ad skipped");
-            if( skipbutton && video.currentTime === video.duration){
-                video.playbackRate = 16
-                console.log("Ad button click");
+    const adText = document.querySelector('.ytp-ad-text');
+    if (adText) {
+        for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
+            const video = document.getElementsByTagName('video')[i];
+            if ( Number.isFinite(video.duration) ){
+                video.currentTime = video.duration;
+                console.log("Ad skipped");
             }
         }
     }
+
 
     const adblockwarningEn = document.querySelector('button-view-model > button[aria-label="Close"]')
     if (adblockwarningEn != null || adblockwarningEn != undefined){
@@ -72,4 +70,6 @@ let skip=()=>{
 
 };
 
-setInterval(skip,500);
+window.onload = skip
+
+setInterval(()=>skip(),500);
