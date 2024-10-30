@@ -11,7 +11,7 @@ const fetchPlayerResponse = () => {
         i++; 
     }
 
-    if ( i >= 2 ) return;
+    if ( i >= 1 ) return;
 
     const xhr = new XMLHttpRequest();
     xhr.open("GET", videoUrl, true);
