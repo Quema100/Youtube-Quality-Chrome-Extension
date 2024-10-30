@@ -2,7 +2,7 @@
     "manifest_version" :  3,
     "name" : "Youtube Quality",
     "description" :"extensions by Quema",
-    "version" : "3.5.0",
+    "version" : "3.6.0",
     
     "icons" :{
         "16":"./icon/Quema.png",
@@ -32,7 +32,13 @@
     "content_scripts": [
         {
             "matches": ["https://www.youtube.com/*"],
-            "js": ["Quality.js","./js/skip.js","./js/speed.js"]
+            "js": ["Quality.js","inject.js","./js/skip.js","./js/speed.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+          "resources": ["injectionfile.js"],
+          "matches": ["https://www.youtube.com/*"]
         }
     ]
 }
