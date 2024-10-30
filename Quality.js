@@ -1,20 +1,26 @@
 let maxQuality
-
+let isQualityListenerAdded = false;
 let Youtube = () => {
     if (window.location.pathname.startsWith('/watch')) {
-
+        
         const qualityListener = (event) => {
             maxQuality = event.detail.quality;
             console.log('Received Quality:', maxQuality);
+            eventlistener = true
             window.removeEventListener('youtubeQuality', qualityListener);
+            isQualityListenerAdded = false;
         };
 
-        window.addEventListener('youtubeQuality', qualityListener);
+        if (!isQualityListenerAdded) {
+            window.addEventListener('youtubeQuality', qualityListener);
+            isQualityListenerAdded = true; 
+        }
 
         if (maxQuality === "720p" || maxQuality === "720p60") {
             console.log('720p found, stopping execution.');
             return ;
         }
+
         
         const spanElements = document.querySelector('div[class="ytp-menuitem-content"] > div > span')
         if (spanElements !== null && spanElements.textContent !== '자동') {
@@ -173,4 +179,4 @@ let Youtube = () => {
 
 window.onload = Youtube;
 
-setInterval(Youtube, 2000);
+setInterval(Youtube, 2500);
