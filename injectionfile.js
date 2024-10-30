@@ -37,4 +37,4 @@ const fetchPlayerResponse = async () => {
 
 window.onload = fetchPlayerResponse
 
-setInterval(fetchPlayerResponse, 3000);
+setInterval(fetchPlayerResponse, 4000);
