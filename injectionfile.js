@@ -11,7 +11,7 @@ const fetchPlayerResponse = async () => {
             console.log('Player Response:', playerResponse);
 
             const adaptiveFormats = playerResponse.streamingData?.adaptiveFormats;
-            if (adaptiveFormats) {
+            if (adaptiveFormats && adaptiveFormats.length > 0) {
                 const maxQuality = adaptiveFormats
                     .filter(format => format.qualityLabel)
                     .reduce((prev, curr) => 
@@ -25,13 +25,13 @@ const fetchPlayerResponse = async () => {
                 });
                 window.dispatchEvent(qualityEvent);
             } else {
-                console.error('Adaptive formats not found.');
+                console.log('Adaptive formats not found.');
             }
         } else {
-            console.error('ytInitialPlayerResponse not found.');
+            console.log('ytInitialPlayerResponse not found.');
         }
     } catch (error) {
-        console.error('Error fetching player response:', error);
+        console.log('Error fetching player response:', error);
     }
 };
 
