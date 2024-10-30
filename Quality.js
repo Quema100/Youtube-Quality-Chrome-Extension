@@ -9,14 +9,12 @@ let Youtube = () => {
             window.removeEventListener('youtubeQuality', qualityListener);
         };
 
-        window.removeEventListener('youtubeQuality', qualityListener);
+        window.addEventListener('youtubeQuality', qualityListener);
 
         if (maxQuality === "720p" || maxQuality === "720p60") {
             console.log('720p found, stopping execution.');
-            return  window.removeEventListener('youtubeQuality', qualityListener); 
+            return ;
         }
-
-        window.addEventListener('youtubeQuality', qualityListener);
         
         const spanElements = document.querySelector('div[class="ytp-menuitem-content"] > div > span')
         if (spanElements !== null && spanElements.textContent !== '자동') {
