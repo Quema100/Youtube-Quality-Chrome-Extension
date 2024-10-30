@@ -1,6 +1,6 @@
 let skip=()=>{
     
-    const adText = document.querySelector('.ytp-ad-text');
+    const adText = document.querySelector('.ytp-ad-player-overlay-layout');
     if (adText) {
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             const video = document.getElementsByTagName('video')[i];
