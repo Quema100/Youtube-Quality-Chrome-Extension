@@ -5,7 +5,7 @@ let skip=()=>{
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             const video = document.getElementsByTagName('video')[i];
             if ( Number.isFinite(video.duration) ){
-                video.currentTime = video.duration; // Some AD may require a bit of time.
+                video.currentTime = video.duration - 0.1; // Some AD may require a bit of time.
                 console.log("Ad skipped");
             }
         }
