@@ -4,14 +4,10 @@ const fetchPlayerResponse = () => {
     if (!window.location.pathname.startsWith('/watch')) return;
 
     const videoUrl = window.location.href;
-    if (lastUrl !== videoUrl) {
-        lastUrl = videoUrl; 
-        i = 0; 
-    } else {
-        i++; 
-    }
+    if (lastUrl !== videoUrl) lastUrl = videoUrl, i = 0; 
+    else if (i < 2) i++; 
 
-    if ( i >= 1 ) return;
+    if ( i > 1 || i <= 0) return;
 
     const xhr = new XMLHttpRequest();
     xhr.open("GET", videoUrl, true);

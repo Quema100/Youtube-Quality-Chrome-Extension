@@ -2,18 +2,18 @@ let maxQuality
 let isQualityListenerAdded = false;
 let Youtube = () => {
     if (window.location.pathname.startsWith('/watch')) {
-        
+
         const qualityListener = (event) => {
             maxQuality = event.detail.quality;
             console.log('Received Quality:', maxQuality);
-            eventlistener = true
-            window.removeEventListener('youtubeQuality', qualityListener);
-            isQualityListenerAdded = false;
+        
+            window.removeEventListener('youtubeQuality', qualityListener);  
+            isQualityListenerAdded = false;  
         };
-
+        
         if (!isQualityListenerAdded) {
             window.addEventListener('youtubeQuality', qualityListener);
-            isQualityListenerAdded = true; 
+            isQualityListenerAdded = true;
         }
 
         if (maxQuality === "720p" || maxQuality === "720p60") {
