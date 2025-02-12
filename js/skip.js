@@ -11,14 +11,14 @@ let skip=()=>{
         }
     }
 
-    const adblockpopup = document.querySelector('ytd-enforcement-message-view-model')
+    const adblockpopup =  document.querySelector('ytd-enforcement-message-view-model')?.parentElement;
 
     const adblockwarningEn = document.querySelector('button-view-model > button[aria-label="Close"]')
 
     const adblockwarning = document.querySelector('button-view-model > button[aria-label="닫기"]')
 
 
-    if (adblockpopup != null || adblockpopup != undefined){
+    if (adblockpopup && window.getComputedStyle(adblockpopup).display !== 'none') {
 
         for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
             document.getElementsByTagName("video")[i].play()
@@ -26,18 +26,10 @@ let skip=()=>{
 
         if (adblockwarningEn != null || adblockwarningEn != undefined){
             adblockwarningEn.click();
-            setTimeout(()=>{        
-                adblockwarningEn.remove();
-                console.log("rm warning")
-            },5000)
         }
 
-        if (adblockpopup != null || adblockpopup != undefined){
+        if (adblockwarning != null || adblockwarning != undefined){
             adblockwarning.click();
-            setTimeout(()=>{        
-                adblockwarning.remove();
-                console.log("rm warning")
-            },5000)
         }
     }
 
