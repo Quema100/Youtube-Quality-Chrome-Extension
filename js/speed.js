@@ -6,7 +6,7 @@ let speed = ()=>{
     const port = chrome.runtime.connect({name: "video-speed"});
     if(document.getElementsByTagName("video").length <= 0)return
     for (let i = 0; i < document.getElementsByTagName("video").length; i++) {
-        port.postMessage({speed:`${document.getElementsByTagName("video")[i].playbackRate}`,flex_speed:flex_speed});
+        port.postMessage({speed:`${document.getElementsByTagName("video")[0].playbackRate}`,flex_speed:flex_speed});
     }
     port.onMessage.addListener((msg)=> {
         if (infintiy === null){
