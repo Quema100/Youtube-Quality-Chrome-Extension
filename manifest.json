@@ -2,7 +2,7 @@
     "manifest_version" :  3,
     "name" : "Youtube Quality",
     "description" :"extensions by Quema",
-    "version" : "4.0.1",
+    "version" : "4.1.0",
     
     "icons" :{
         "16":"./icon/Quema.png",
